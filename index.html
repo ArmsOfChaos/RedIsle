@@ -1,85 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Isle</title>
-    <style>
-        body, html {
-                height: 100%;
-                margin: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDISLE // ROOT</title>
+  <style>
+    html, body {
+      background-color: black;
     }
-        .terminal {
-            width: 1000px;
-            height: 700px;
-            border-radius: 5%;
-            background-color: #111111;
-            
-            min-height: 300px;
-            box-shadow: 0 0 10px red;
-            text-align: justify;
-            }
-            .entry {
-                display: block;
-                font-family: 'Courier New', Courier, monospace;
-                font: 35px;
-                color: red;
-                margin: auto;
+    .side-bar {
+      height: 900px;
+      width: 200px;
+      background-color: transparent;
+      border: 2px solid gray;
+    }
+    .side-bar p, .side-bar a {
+      color: gray;
+      font-family: 'Courier New', Courier, monospace;
+    }
 
-            }
-            .header {
-                display: block;
-                font-family: 'Courier New', Courier, monospace;
-                font: 55px;
-                color: red;
-            }
-            a {
-                color: red;
-                font-family: 'Courier New', Courier, monospace;
-                font: 35px;
-                
-            }
-    </style>
+    .bar-text {
+      position: absolute;
+      top: 4px;
+      left: 20px;
+
+      background-color: black;
+      height: 10px;
+      width: 40px;
+    }
+    .Main-bar {
+      background-color: transparent;
+      border: 2px solid gray;
+
+      position: absolute;
+      height: 900px;
+      width: 1550px;
+      left: 250px;
+      top: 8px;
+    }
+    .main-bar-coverpart {
+      background-color: rgb(0, 0, 0);
+      height: 20px;
+      width: 50px;
+      position: absolute;
+      top: -6px;
+      left: 20px;
+    }
+
+
+    .container {
+      height: 200px;
+      width: 300px;
+      border: 2px solid gray;
+      position: absolute;
+
+      top: 298px;
+      left: 50px;
+    }
+
+  </style>
 </head>
-<body bgcolor="black">
-    <div class="parent">
-        <div class="terminal">
-           <br>
-           <br>
-           <br>
-           <p class="header">&nbsp;/dime/Index/RedIsle/</p>
-           <br>
-           <br>
-           <p class="header">&nbsp;dime@Debian-i3~$: ls MainUse</p>
-           <p class="entry">&nbsp;<a href="https://youtube.com">Youtube</a></p>
-           <br>
-           <p class="entry">&nbsp;<a href="https://discord.com">Discord</a></p>
-           <br>
-           <p class="entry">&nbsp;<a href="https://roblox.com">Roblox</a></p>
-           <br>
-           <p class="entry">&nbsp;<a href="https://github.com">Github</a></p>
-           <br>
-           <br>
-           <p class="header">&nbsp;dime@Debian-i3~$: ls Linux</p>
-           <br>
-           <p class="entry">&nbsp;<a href="https://debian.org">Debian</a></p>
-           <br>
-           <p class="entry">&nbsp;<a href="https://archlinux.org">Arch Linux</a></p>
-           <br>
-           <p class="entry">&nbsp;<a href="https://linuxmint.com">Linux Mint</a></p>
-           <br>
-           <br>
-           <p class="header">&nbsp;dime@Debian-i3~$: ls AlsoCheckOut</p>
-           <br>
-           <p class="entry">&nbsp;<a href="aboutme.html">About Me</a></p>
-           <p class="entry">&nbsp;<a href="OGindex.html">OG index</a></p>
+<body>
+  <div class="bar-text">
+    <p style="color: gray; font-family: 'Courier New', Courier, monospace; position: absolute; top: -20px; left: 6px;">Nav</p>
+  </div>
+  <div class="side-bar">
+    <center>
+      
+      <a href="https://discord.gg/2NBSAcG6Yj">
+        <img src="https://cdn.discordapp.com/attachments/1330323990329430028/1371870083332182096/attachment.gif?ex=6824b513&is=68236393&hm=a88acf1263a1b9e1a67f5c1e1ee1631a88a7dd4c6ecd4e3f45150fecc8608652&" style="height: 100px; width: 100px;">
+      </a>
+      <p>> EMPRSKNM.ROOT</p>
+      <br>
+      <p><a href="wip.html">EMPRSKNM.SIGNAL</a></p>
+      <br>
+      <p><a href="wip.html">EMPRSKNM.CREATION</a></p>
+      <br>
+      <p><a href="wip.html">EMPRSKNM.OVRSR</a></p>
+      <br>
+      <p><a href="wip.html">EMPRSKNM.NULL</a></p>
+      <br>
+    </center>
+  </div>
 
+  
 
-
-        </div>
+  <div class="Main-bar">
+    <div class="main-bar-coverpart">
+      <p style="color: gray; font-family: 'Courier New', Courier, monospace; position: absolute; top: -18px; left: 6px;">ROOT</p>
     </div>
+
+
+    <br><br><br>
+    <center>
+      <h1 style="color: gray; font-family: 'Courier New', Courier, monospace;" id="timeh1">TEST</h1>
+
+       <script>
+        function updateTime() {
+          const now = new Date();
+          const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+          document.getElementById("timeh1").textContent = timeString;
+        }
+
+        updateTime(); // I had to get AI to write this because idk JS
+        setInterval(updateTime, 1000); 
+      </script>
+
+    </center>
+      <br><br><br>
+
+
+    <div class="container" style="position: absolute; top: 202px; left: 50px;">
+      <div class="bar-text" style="background-color: rgb(0, 0, 0); position: absolute; left: 15px; top: -5px; width: 90px;"></div>
+      <p style="font-family: 'Courier New', Courier, monospace; color: gray; position: absolute; left: 25px; top: -25px;">YOUTUBE</p>
+      <a href="https://www.youtube.com">
+        <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" style="height: 100px; width: 100px; position: absolute; left: 95px; top: 50px;">
+      </a>
+      </div>
+    
+    <div class="container" style="position: absolute; top: 201.7px; left: 615px;">
+      <div class="bar-text" style="background-color: rgb(0, 0, 0); position: absolute; left: 15px; top: -5px; width: 90px;"></div>
+      <a href="">
+        <img src="" style="height: 150px; width: 150px; position: absolute; left: 70px; top: 20px;">
+      </a>
+      <p style="font-family: 'Courier New', Courier, monospace; color: red; position: absolute; left: 35px; top: -25px;">ERROR</p>    
+      </div>
+    
+    <div class="container" style="position: absolute; top: 201.7px; left: 1190px;">
+      <div class="bar-text" style="background-color: rgb(0, 0, 0); position: absolute; left: 15px; top: -5px; width: 90px;"></div>
+      <a href="https://github.com/EmperorSayakinam">
+        <img src="https://styles.redditmedia.com/t5_2s5m1/styles/communityIcon_eyu47oqjbkue1.png" style="height: 150px; width: 150px; position: absolute; left: 70px; top: 20px;">
+      </a>
+      <p style="font-family: 'Courier New', Courier, monospace; color: gray; position: absolute; left: 30px; top: -25px;">GITHUB</p>    
+      </div>
+
+  </div>
+
+
+
+
 </body>
 </html>
