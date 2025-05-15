@@ -46,7 +46,12 @@
       width: 300px;
       border: 2px solid gray;
       position: absolute;
-
       top: 298px;
       left: 50px;
+    }
+
+
+    p {
+        color: gray;
+        font-family: 'Courier New', Courier, monospace;
     }
