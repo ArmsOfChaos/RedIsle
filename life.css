@@ -1,0 +1,52 @@
+    html, body {
+      background-color: black;
+    }
+    .side-bar {
+      height: 900px;
+      width: 200px;
+      background-color: transparent;
+      border: 2px solid gray;
+    }
+    .side-bar p, .side-bar a {
+      color: gray;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .bar-text {
+      position: absolute;
+      top: 4px;
+      left: 20px;
+
+      background-color: black;
+      height: 10px;
+      width: 40px;
+    }
+    .Main-bar {
+      background-color: transparent;
+      border: 2px solid gray;
+
+      position: absolute;
+      height: 900px;
+      width: 1550px;
+      left: 250px;
+      top: 8px;
+    }
+    .main-bar-coverpart {
+      background-color: rgb(0, 0, 0);
+      height: 20px;
+      width: 100px;
+      position: absolute;
+      top: -6px;
+      left: 20px;
+    }
+
+
+    .container {
+      height: 200px;
+      width: 300px;
+      border: 2px solid gray;
+      position: absolute;
+
+      top: 298px;
+      left: 50px;
+    }
