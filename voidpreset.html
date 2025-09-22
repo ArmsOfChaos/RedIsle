@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REDISLE.VOID</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica', 'Arial', sans-serif; }
+    html, body { height: 100%; background: #000; color: #fff; overflow: hidden; cursor: none; }
+
+    /* Glowing white text */
+    .glow { color: #fff; text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 20px #fff,0 0 40px #fff; }
+
+    body { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+    /* Date */
+    #date { font-size: 2em; margin-bottom: 10px; text-shadow: 0 0 5px #fff,0 0 10px #fff; }
+
+    /* Clock */
+    #clock { font-size: 6em; margin-bottom: 30px; animation: pulse 2s infinite alternate, glitch 5s infinite; }
+    @keyframes pulse {
+        0% { text-shadow:0 0 5px #fff,0 0 10px #fff,0 0 20px #fff,0 0 40px #fff; }
+        100% { text-shadow:0 0 20px #fff,0 0 40px #fff,0 0 60px #fff,0 0 80px #fff; }
+    }
+    @keyframes glitch {
+        0%, 20%, 40%, 60%, 80%, 100% { transform: translateX(0); }
+        10% { transform: translateX(-2px); }
+        30% { transform: translateX(2px); }
+        50% { transform: translateX(-1px); }
+        70% { transform: translateX(1px); }
+        90% { transform: translateX(-2px); }
+    }
+
+    /* Search bar */
+    #search-container { position: relative; width: 50%; max-width: 600px; margin-bottom: 50px; }
+    #search {
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        font-size: 1.2em;
+        background: rgba(255,255,255,0.05);
+        color: #fff;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px #fff;
+        text-shadow: 0 0 5px #fff;
+    }
+    #search::placeholder { color: #aaa; }
+
+    /* Horizontal link categories */
+    .categories {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+        width: 90%;
+        max-width: 1200px;
+        animation: float 6s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .link-section { text-align: center; min-width: 120px; }
+    .link-section h2 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        text-shadow: 0 0 5px #fff;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+        animation: glitch 6s infinite;
+    }
+
+    .links { display: flex; flex-direction: column; gap: 10px; }
+    .links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.3s;
+        text-shadow: 0 0 5px #fff,0 0 10px #fff;
+    }
+    .links a:hover { text-shadow: 0 0 20px #fff,0 0 40px #fff; transform: scale(1.1); }
+
+    /* Particles */
+    .particle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.6;
+        background: #fff;
+        animation: drift linear infinite;
+    }
+    @keyframes drift {
+        from { transform: translateY(0) translateX(0); opacity:0.7; }
+        to { transform: translateY(-100vh) translateX(50vw); opacity:0; }
+    }
+
+    /* Cursor trail */
+    .trail {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: #fff;
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 0.8;
+        animation: fade 0.5s forwards;
+    }
+    @keyframes fade { 0%{opacity:0.8;} 100%{opacity:0;} }
+
+</style>
+</head>
+<body>
+
+<div id="date" class="glow"></div>
+<div id="clock" class="glow"></div>
+
+<div id="search-container">
+    <input type="text" id="search" placeholder=">> Enter something..." onkeydown="if(event.key==='Enter'){location.href='https://www.google.com/search?q='+this.value}">
+</div>
+
+<div class="categories">
+    <div class="link-section">
+        <h2>Media</h2>
+        <div class="links">
+            <a href="https://www.youtube.com" target="_blank">YT</a>
+            <a href="https://music.youtube.com" target="_blank">YT Music</a>
+            <a href="https://www.spotify.com" target="_blank">Spotify</a>
+            <a href="https://www.pinterest.com" target="_blank">Pinterest</a>
+        </div>
+    </div>
+
+    <div class="link-section">
+        <h2>Communication</h2>
+        <div class="links">
+            <a href="https://discord.com" target="_blank">Discord</a>
+        </div>
+    </div>
+
+    <div class="link-section">
+        <h2>Gaming</h2>
+        <div class="links">
+            <a href="https://www.roblox.com" target="_blank">Roblox</a>
+            <a href="https://www.activision.com" target="_blank">Activision</a>
+        </div>
+    </div>
+
+    <div class="link-section">
+        <h2>Tools</h2>
+        <div class="links">
+            <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+            <a href="https://www.virustotal.com" target="_blank">VirusTotal</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://discord.com/developers/docs/intro" target="_blank">Discord Dev Portal</a>
+        </div>
+    </div>
+
+
+    <div class="link-section">
+        <h2>Shopping</h2>
+        <div class="links">
+            <a href="https://www.ebay.com" target="_blank">eBay</a>
+            <a href="https://www.amazon.com" target="_blank">Amazon</a>
+            <a href="https://chrome.google.com/webstore" target="_blank">Chrome Store</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+        const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+        document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+
+        let h = now.getHours().toString().padStart(2,'0');
+        let m = now.getMinutes().toString().padStart(2,'0');
+        let s = now.getSeconds().toString().padStart(2,'0');
+        document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+
+    // Particles
+    const particleCount = 80;
+    for(let i=0;i<particleCount;i++){
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random()*3+1;
+        p.style.width = size+'px';
+        p.style.height = size+'px';
+        p.style.top = Math.random()*100+'vh';
+        p.style.left = Math.random()*100+'vw';
+        p.style.animationDuration = 5+Math.random()*10+'s';
+        document.body.appendChild(p);
+    }
+
+    // Cursor trail
+    document.addEventListener('mousemove', e => {
+        const trail = document.createElement('div');
+        trail.className = 'trail';
+        trail.style.left = e.pageX+'px';
+        trail.style.top = e.pageY+'px';
+        document.body.appendChild(trail);
+        setTimeout(()=>trail.remove(),500);
+    });
+</script>
+
+</body>
+</html>
