@@ -1,3 +1,7 @@
-# RedIsle
-A website thing I made for myself. Feel free to use it if you want.
-Link - https://ArmsOfChaos.github.io/RedIsle/
+# REDISLE
+REDISLE is a dead project. It was supposed to be a personal start page website for myself. I only recently have updated it.
+
+
+There are two presets
+- [REDISLE.OLD](https://armsofchaos.github.io/RedIsle/OGindex.html)
+- [REDISLE.OLD](https://armsofchaos.github.io/RedIsle/voidpreset.html)
