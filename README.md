@@ -4,4 +4,4 @@ REDISLE is a dead project. It was supposed to be a personal start page website f
 
 There are two presets
 - [REDISLE.OLD](https://armsofchaos.github.io/RedIsle/OGindex.html)
-- [REDISLE.OLD](https://armsofchaos.github.io/RedIsle/voidpreset.html)
+- [REDISLE.VOID](https://armsofchaos.github.io/RedIsle/voidpreset.html)
